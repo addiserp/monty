@@ -50,3 +50,23 @@ void pall(stack_t **stack, unsigned int nline)
 		temp = temp->next;
 	}
 }
+
+/**
+ * free_stack - frees all
+ * @stack: pointer to the head
+ * Return: void.
+ */
+void free_stack(stack_t **stack)
+{
+	stack_t *temp = NULL;
+
+	if (stack == NULL || *stack == NULL)
+		return;
+
+	while (*stack != NULL)
+	{
+		temp = (*stack)->next;
+		free(*stack);
+		*stack = temp;
+	}
+}

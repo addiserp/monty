@@ -94,5 +94,11 @@ int _isalpha(int c);
 void parsefile(FILE *file);
 void parseline(line_t *line, char *buffer);
 
+/* Stack prototypes functions */
+void push(stack_t **stack, unsigned int nline);
+void pall(stack_t **stack, unsigned int nline);
+void pint(stack_t **stack, unsigned int nline);
+void pop(stack_t **stack, unsigned int nline);
+void swap(stack_t **stack, unsigned int nline);
 
 #endif /* MONTY_H */
