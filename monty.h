@@ -10,6 +10,7 @@
 
 #define EXIT_SUCCESS 1
 #define EXIT_FAILURE 0
+arg_t arg = {0, 0};
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
  * @n: integer
@@ -86,15 +87,24 @@ typedef struct meta_s
 	FILE *file;
 } meta_t;
 
-/* Important functions */
+/* Math functions */
+void subop(stack_t **stack, unsigned int nline);
+void addop(stack_t **stack, unsigned int nline);
+void divop(stack_t **stack, unsigned int nline);
+void mulop(stack_t **stack, unsigned int nline);
+void modop(stack_t **stack, unsigned int nline);
+
+/* main functions */
 void (*get_op_func(line_t line, meta_t *meta))(stack_t **, unsigned int);
 int _isalpha(int c);
 
-/* Parse functions */
+/* others functions */
 void parsefile(FILE *file);
 void parseline(line_t *line, char *buffer);
+bool comment_check(line_t line);
+void push_check(line_t line, meta_t *meta, char *opcode);
 
-/* Stack prototypes functions */
+/* Stack functions */
 void push(stack_t **stack, unsigned int nline);
 void pall(stack_t **stack, unsigned int nline);
 void pint(stack_t **stack, unsigned int nline);
@@ -112,10 +122,4 @@ void qpush(stack_t **stack, unsigned int nline);
 void addqu(stack_t **stack, unsigned int nline);
 void addst(stack_t **stack, unsigned int nline);
 
-/* Math functions */
-void subop(stack_t **stack, unsigned int nline);
-void addop(stack_t **stack, unsigned int nline);
-void divop(stack_t **stack, unsigned int nline);
-void mulop(stack_t **stack, unsigned int nline);
-void modop(stack_t **stack, unsigned int nline);
 #endif /* MONTY_H */

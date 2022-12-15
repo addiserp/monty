@@ -2,7 +2,7 @@
 
 /**
  * get_op_func - start function opcode and text
- * @line: struct containing line number and line contents 
+ * @line: struct containing line number and line contents
  * @meta: struct allocated memory
  * Return: pointer to the target function
  */

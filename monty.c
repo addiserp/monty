@@ -3,7 +3,7 @@
 /**
  * main - opens a monty file
  * @argc: arguments for count
- * @argv: arguments for array 
+ * @argv: arguments for array
  * Return: status of the program
  */
 int main(int argc, char *argv[])
