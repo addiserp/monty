@@ -8,9 +8,8 @@
 #include <stdbool.h>
 #include <ctype.h>
 
-#define EXIT_SUCCESS 1
-#define EXIT_FAILURE 0
-arg_t arg = {0, 0};
+
+
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
  * @n: integer
