@@ -25,3 +25,4 @@ int main(int argc, char *argv[])
 
 	parsefile(file);
 	return (EXIT_SUCCESS);
+}
