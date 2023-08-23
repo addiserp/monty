@@ -8,9 +8,11 @@
 #include <sys/types.h>
 #include <unistd.h>
 #include <sys/stat.h>
+#include <fcntl.h>
 
+ 
 
-FILE *file;
+extern FILE *file;
 
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
@@ -55,5 +57,7 @@ void get_div(stack_t **stack, unsigned int line_number);
 void get_mul(stack_t **stack, unsigned int line_number);
 void get_nop(stack_t **stack, unsigned int line_number);
 void get_sub(stack_t **stack, unsigned int line_number);
+void (*operator_function)(stack_t **, unsigned int);
+void (*go(char *op_f, unsigned int l, stack_t **s))(stack_t**, unsigned int);
  
 #endif /* MONTY_H */
