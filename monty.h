@@ -50,4 +50,9 @@ void get_pint(stack_t **stack, unsigned int line_number);
 void get_pop(stack_t **stack, unsigned int line_number);
 void get_swap(stack_t **stack, unsigned int line_number);
 void get_add(stack_t **stack, unsigned int line_number);
+void get_div(stack_t **stack, unsigned int line_number);
+void get_mul(stack_t **stack, unsigned int line_number);
+void get_nop(stack_t **stack, unsigned int line_number);
+void get_sub(stack_t **stack, unsigned int line_number);
+ 
 #endif /* MONTY_H */

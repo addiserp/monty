@@ -12,6 +12,7 @@ i * Description: 6. sub
  * 2. upon fail, EXIT_FAILURE
  *
  */
+
 void get_sub(stack_t **stack, unsigned int line_number)
 {
 	stack_t *first, *second;
