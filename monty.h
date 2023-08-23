@@ -46,4 +46,5 @@ void push(stack_t **stack, unsigned int line_number, char *temp);
 void pall(stack_t **stack, unsigned int line_number);
 int _isdigit(char *str);
 void get_free(stack_t *stack);
+void get_pint(stack_t **stack, unsigned int line_number);
 #endif /* MONTY_H */
