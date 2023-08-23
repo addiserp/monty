@@ -46,6 +46,7 @@ void push(stack_t **stack, unsigned int line_number, char *temp);
 void pall(stack_t **stack, unsigned int line_number);
 int _isdigit(char *str);
 void get_free(stack_t *stack);
+void get_pop(stack_t **stack, unsigned int line_number);
 void get_pint(stack_t **stack, unsigned int line_number);
 void get_pop(stack_t **stack, unsigned int line_number);
 void get_swap(stack_t **stack, unsigned int line_number);
