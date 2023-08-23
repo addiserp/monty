@@ -9,7 +9,7 @@
 #include <unistd.h>
 #include <sys/stat.h>
 
-extern FILE *file;
+
 FILE *file;
 
 /**
