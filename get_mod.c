@@ -32,7 +32,7 @@ void get_mod(stack_t **stack, unsigned int line_number)
 		{
 			fprintf(stderr, "L%d: division by zero\n", line_number);
 			fclose(file);
-			free_stack(*stack);
+			get_free(*stack);
 			exit(EXIT_FAILURE);
 		}
 		second->n %= first->n;
