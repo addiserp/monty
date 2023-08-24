@@ -22,19 +22,20 @@ void get_mod(stack_t **stack, unsigned int line_number)
 	{
 		fprintf(stderr, "L%d: can't mod, stack too short\n", line_number);
 		fclose(file);
+		get_free(*stack);
+		exit(EXIT_FAILURE);
+	}
+	else if ((*stack)->n == 0)
+	{
+		fprintf(stderr, "L%d: division by zero\n", line_number);
+		fclose(file);
+		get_free(*stack);
 		exit(EXIT_FAILURE);
 	}
 	else
 	{
 		first = *stack;
 		second = first->next;
-		if (first->n == 0)
-		{
-			fprintf(stderr, "L%d: division by zero\n", line_number);
-			fclose(file);
-			get_free(*stack);
-			exit(EXIT_FAILURE);
-		}
 		second->n %= first->n;
 		*stack = second;
 		(*stack)->prev = NULL;
